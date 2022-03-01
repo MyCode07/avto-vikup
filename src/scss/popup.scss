@@ -1,0 +1,216 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &._sending {
+        overflow: hidden;
+        pointer-events: none;
+        .popup__body,
+        button {
+            background-color: #ae9797;
+        }
+    }
+
+    // .popup__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        @include adaptive-value("padding", 40, 20, 1);
+        border-radius: 6px;
+        position: relative;
+        & :not(:last-child) {
+            @include adaptive-value("margin-bottom", 20, 10, 1);
+        }
+    }
+
+    // .popup__close
+
+    &__close {
+    }
+
+    // .popup__form
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    textarea {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 5px;
+        @include adaptive-value("font-size", 20, 16, 1);
+        @include adaptive-value("width", 320, 260, 1);
+        &._error {
+            border: 1px solid red;
+            box-shadow: 0px 0px 2px 1px rgba(255, 0, 0, 0.8);
+            display: inline-block;
+        }
+    }
+
+    // .popup__name
+
+    &__name {
+        margin-top: 20px;
+    }
+
+    // .popup__email
+
+    &__email {
+    }
+
+    // .popup__messege
+
+    &__messege {
+    }
+
+    // .popup__button
+
+    &__button {
+        border-radius: 10px;
+        @include adaptive-value("font-size", 20, 16, 1);
+        @include adaptive-value("padding-top", 10, 3, 1);
+        @include adaptive-value("padding-bottom", 10, 3, 1);
+        @include adaptive-value("padding-left", 20, 6, 1);
+        @include adaptive-value("padding-right", 20, 6, 1);
+        border: 1px solid black;
+        background-color: #fff;
+        color: #000;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 1px;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #000;
+                color: #fff;
+                transform: translate(3px, -3px);
+            }
+        }
+    }
+
+    // .popup__choose
+
+    &__choose {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        // .popup__choose-labels
+
+        &-labels {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            label {
+                margin-bottom: 0 !important;
+                flex: 0 0 50%;
+                display: inline-flex;
+                line-height: 140%;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+
+                &._active {
+                    &:after {
+                        transform: scale(1);
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    align-self: flex-start;
+                    flex: 0 0 20px;
+                    height: 20px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    margin: 0 10px 0 0;
+                    left: 0;
+                    top: 0;
+                    transition: transform 0.3s ease 0s;
+                    border: 2px solid #000;
+                }
+                &:after {
+                    transition: transform 0.3s ease 0s;
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #000;
+                    border-radius: 50%;
+                    transform: scale(0);
+                }
+            }
+        }
+
+        // .popup__choose-messenger
+
+        input {
+            display: none;
+            margin-bottom: 0 !important;
+            &._active {
+                display: inline-block;
+            }
+        }
+
+        // .popup__choose-email
+
+        &-email {
+            display: none;
+        }
+
+        // .popup__choose-telegram
+
+        &-telegram {
+        }
+    }
+}
+
+.mistake,
+.request {
+    &__body {
+        background-color: rgb(255, 0, 0);
+    }
+    &__close {
+        span {
+            background-color: #fff;
+        }
+    }
+    &__content {
+        color: #fff;
+    }
+}
+.thanks {
+    // .thanks__body
+
+    &__body {
+    }
+
+    // .thanks__close
+
+    &__close {
+        span {
+            background-color: green;
+        }
+    }
+
+    // .thanks__content
+
+    &__content {
+        color: green;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220228130548">
+    <title>Спасибо за заявку</title>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#3789a0">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="page-thanks">
+    <header class="header">
+        <div class="header__container _container">
+            <div class="header__body">
+                <div class="header__top top-thanks">
+                    <div class="header__top-left">
+                        <div class="header__top-logo">
+                            <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
+                            <div class="header__top-logo-text"> <span>авто</span><br>выкуп</div>
+                        </div>
+                        <span class="header__top-description">Срочный выкуп авто <br> в Санкт-Петербурге и ЛО</span>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__top-call">
+                            <a href="tel:+78121234567" class="header__top-call-phone">+ 7 (812) 123-45-67</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="thanks">
+        <div class="thanks__body">
+            <div class="thanks__content">
+                <div class="thanks__text">Спасибо за заявку. <br> Мы свяжемсья с вами в <br> ближайщее время.</div>
+            </div>
+        </div>
+        <div class="thanks__back"> Вы будете перенаправлены на главную страницу через 5 секунд, или нажмите <a
+                href="index.html">вернутся.</a> </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 5000);
+        })
+    </script>
+</body>
+
+</html>

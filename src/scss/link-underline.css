@@ -1,0 +1,22 @@
+._link-underline {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+._link-underline:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 3px;
+  background-color: #fff;
+  bottom: -10px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  ._link-underline:hover:before {
+    width: 100%;
+  }
+}/*# sourceMappingURL=link-underline.css.map */
